@@ -5,6 +5,7 @@ interface ProductCardProps{
     product:Product;
 }
 function ProductCard({product}:ProductCardProps){
+  //description display of the particular product
     const [showDescription,setShowDescription]=useState<boolean>(false);
     const cardStyle: React.CSSProperties = {
     border: "1px solid #ddd",
@@ -13,7 +14,7 @@ function ProductCard({product}:ProductCardProps){
     display: "flex",
     flexDirection: "column",
     gap: "8px",
-    backgroundColor: "#fff",
+    backgroundColor: "var(--card-bg)",
     height:"100%"
   };
    const imgStyle: React.CSSProperties = {
@@ -62,7 +63,23 @@ function ProductCard({product}:ProductCardProps){
         </p>
         <button 
         onClick={()=>setShowDescription(!showDescription)}
-        style={{marginTop:'8px',cursor:'pointer'}}
+        style={{
+        marginTop: "auto",
+        padding: "8px 12px",
+        borderRadius: "6px",
+        border: "1px solid #cbd5e1",
+        backgroundColor: "#f1f5f9",
+        cursor: "pointer",
+        fontSize: "13px",
+        fontWeight: 500,
+        transition: "all 0.2s ease",
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.backgroundColor = "#e2e8f0")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.backgroundColor = "#f1f5f9")
+        }
         >
             {showDescription? "Hide Details" : "Show Details"}
         </button>

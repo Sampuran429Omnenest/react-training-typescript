@@ -1,2 +1,1 @@
-the morning session code and practice is in the main branch and the assignments are in the assignments branch 
-Day5 (20th feb): typeScript tutorial by building the ecommerce application 
+day 5 (20th feb) : implementation of the challenge 1-5 given in the mini project docs using tsx from morning sessions
