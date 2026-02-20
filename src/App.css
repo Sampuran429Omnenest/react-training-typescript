@@ -1,0 +1,10 @@
+/* src/App.css — minimal reset only */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background-color: #F8FAFC;
+}
